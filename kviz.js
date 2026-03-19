@@ -29,6 +29,14 @@ if (urlSearch.includes("?")) {
             latnivalok.push(kerdesParok[i].split("=")[1])
         }
     }
+
+let vizesesEredmenye = document.getElementById("vizeses_eredmenye")
+if(vizeses === "Gullfoss") {
+    vizesesEredmenye.innerHTML = `<p style="color: green;">A választott vízesés (${vizeses}) a helyes válasz!</p>`
+}else{
+    vizesesEredmenye.innerHTML = `<p style="color: red;">A választott vízesés (${vizeses}) nem a helyes válasz!</p>`
+}
+
     latnivalokSzoveg = latnivalok.join(", ")
     console.log(latnivalok);
     console.log(latnivalokSzoveg);
